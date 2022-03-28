@@ -1,15 +1,22 @@
 package test.skypro.part1;
 
 public class Author {
-    private String name;
+    private String firstName;
+    private String secondName;
     private String surname;
 
-    public Author (String surname, String name) {
+    public Author (String surname, String firstName, String secondName) {
         this.surname = surname;
-        this.name = name;
+        this.firstName = firstName;
+        this.secondName = secondName;
+    }
+
+    public Author (String surname, String name) {
+        this (surname, name, null);
     }
 
     public String getAuthor () {
-        return this.surname + " " + this.name;
+       if (this.secondName == null) return this.surname + ", " + this.firstName;
+       else return this.surname + ", " + this.firstName + " " + this.secondName;
     }
 }
