@@ -10,7 +10,8 @@ public class Book {
     private int yearOfPublishing;
 
     public Book (String name, Author author, int year) {
-        this.id = 1;
+        java.util.Random random = new java.util.Random();
+        this.id = random.nextInt();
         this.name= name;
         this.author = author;
         this.yearOfPublishing = year;

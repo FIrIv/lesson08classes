@@ -9,7 +9,8 @@ public class Author {
     private String surname;
 
     public Author (String surname, String firstName, String secondName) {
-        this.id = 1;
+        java.util.Random random = new java.util.Random();
+        this.id = random.nextInt();
         this.surname = surname;
         this.firstName = firstName;
         this.secondName = secondName;
