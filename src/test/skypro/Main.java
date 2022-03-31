@@ -15,11 +15,11 @@ public class Main {
         Book book2 = new Book ("Правила виноделов", author2, 1985);
         Book book3 = new Book ("Руслан и Людмила", author1, 2000);
 
-        System.out.println("book1 : " + book1);
-        System.out.println("book2 : " + book2);
-        System.out.println("book3 : " + book3);
+        System.out.println("book1 : " + book1.getName() + "; " + book1.getAuthor() + "; " + book1.getYearOfPublishing() + " г. ");
+        System.out.println("book2 : " + book2.getName() + "; " + book2.getAuthor() + "; " + book2.getYearOfPublishing() + " г. ");
+        System.out.println("book3 : " + book3.getName() + "; " + book3.getAuthor() + "; " + book3.getYearOfPublishing() + " г. ");
 
         book3.setYearOfPublishing(2002);
-        System.out.println("book3 (переиздание) : " + book3);
+        System.out.println("book3 (переиздание) : " + book3.getName() + "; " + book3.getAuthor() + "; " + book3.getYearOfPublishing() + " г. ");
     }
 }
