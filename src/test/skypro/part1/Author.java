@@ -1,11 +1,15 @@
 package test.skypro.part1;
 
+import java.util.Objects;
+
 public class Author {
+    private int id;
     private String firstName;
     private String secondName;
     private String surname;
 
     public Author (String surname, String firstName, String secondName) {
+        this.id = 1;
         this.surname = surname;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -15,8 +19,29 @@ public class Author {
         this (surname, name, null);
     }
 
+    public int getId () {
+        return this.id;
+    }
+
     public String getAuthor () {
        if (this.secondName == null) return this.surname + ", " + this.firstName;
        else return this.surname + ", " + this.firstName + " " + this.secondName;
+    }
+
+    @Override
+    public String toString () {
+        return this.getAuthor();
+    }
+
+    @Override
+    public boolean equals (Author author2) {
+        if (this.getClass() != author2.getClass()) return false;
+        Author temp = (Author) author2;
+        return id == temp.id;
+    }
+
+    @Override
+    public int hashCode () {
+        return Objects.hash(id);
     }
 }
