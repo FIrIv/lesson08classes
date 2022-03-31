@@ -6,7 +6,7 @@ import test.skypro.part1.Book;
 public class Main {
 
     public static void main(String[] args) {
-	    // авторы
+        // авторы
         Author author1 = new Author("Пушкин", "Александр", "Сергеевич");
         Author author2 = new Author("Ирвинг", "Джон");
 
@@ -34,5 +34,11 @@ public class Main {
         else System.out.println("book1 и book2 разные");
         System.out.println("book1 : " + book1);
         System.out.println("book2 : " + book2);
+
+        System.out.println();
+        if (author1.equals(author2)) System.out.println("author1 и author2 одинаковые");
+        else System.out.println("author1 и author2 разные");
+        System.out.println("author1 : " + author1);
+        System.out.println("author2 : " + author2);
     }
 }

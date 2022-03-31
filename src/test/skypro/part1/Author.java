@@ -25,8 +25,8 @@ public class Author {
     }
 
     public String getAuthor () {
-       if (this.secondName == null) return this.surname + ", " + this.firstName;
-       else return this.surname + ", " + this.firstName + " " + this.secondName;
+        if (this.secondName == null) return this.surname + ", " + this.firstName;
+        else return this.surname + ", " + this.firstName + " " + this.secondName;
     }
 
     @Override
