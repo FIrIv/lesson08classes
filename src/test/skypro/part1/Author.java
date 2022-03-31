@@ -35,10 +35,11 @@ public class Author {
     }
 
     @Override
-    public boolean equals (Author author2) {
+    public boolean equals (Object author2) {
         if (this.getClass() != author2.getClass()) return false;
         Author temp = (Author) author2;
-        return id == temp.id;
+        return (firstName == temp.firstName && secondName == temp.secondName && surname == temp.surname); // если сравнивать по Ф.И.О
+        //return id == temp.id; // если сравнивать по id
     }
 
     @Override

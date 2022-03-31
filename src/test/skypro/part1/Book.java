@@ -44,10 +44,11 @@ public class Book {
     }
 
     @Override
-    public boolean equals (Book book2) {
+    public boolean equals (Object book2) {
         if (this.getClass() != book2.getClass()) return false;
         Book temp = (Book) book2;
-        return id == temp.id;
+        return (name == temp.name && author.equals(temp.author)); // если сравнивать по названию и автору
+        //return id == temp.id; // если сравнивать по id
     }
 
     @Override
